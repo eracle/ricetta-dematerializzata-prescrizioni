@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://interroganreutilrichiesta.xsd.dem.sanita.finanze.it" xmlns:td="http://tipodati.xsd.dem.sanita.finanze.it" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://interroganreutilrichiesta.xsd.dem.sanita.finanze.it" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://tipodati.xsd.dem.sanita.finanze.it" schemaLocation="TipiDatiInterrogaNreUtilizzati.xsd"/>
+	<xs:annotation>
+		<xs:documentation>Versione 1.2</xs:documentation>
+	</xs:annotation>
+	<xs:element name="InterrogaNreUtilRichiesta">
+		<xs:annotation>
+			<xs:documentation>Elemento base per la richiesta di interrogazione dei nre utilizzati per numerare un prescritto</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="pinCode" type="td:stringType">
+					<xs:annotation>
+						<xs:documentation>PinCode inviante</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="codRegione" type="td:codRegioneType">
+					<xs:annotation>
+						<xs:documentation>Codice della Regione/P.A.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="nre" type="td:nreType" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Singolo Numero Ricetta Elettronica</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="codLotto" type="td:codLottoType" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Numero lotto </xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="cfMedico" type="td:cfMedicoType">
+					<xs:annotation>
+						<xs:documentation>Codice fiscale di un medico prescrittore</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="cfAssistito" type="td:cfMedicoType" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Codice fiscale dell'assistito</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="tipoPrescr" type="td:tipoPrescType" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Numero lotto </xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="dataCompilazioneRicettaDal" type="td:dataOraType" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Data compilazione ricetta “DAL” nel formato aaaa-mm-gg</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="dataCompilazioneRicettaAl" type="td:dataOraType" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Data compilazione ricetta “AL” nel formato aaaa-mm-gg</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

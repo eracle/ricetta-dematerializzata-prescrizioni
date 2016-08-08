@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://interroganreutilricevuta.xsd.dem.sanita.finanze.it" xmlns:td="http://tipodati.xsd.dem.sanita.finanze.it" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://interroganreutilricevuta.xsd.dem.sanita.finanze.it" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://tipodati.xsd.dem.sanita.finanze.it" schemaLocation="TipiDatiInterrogaNreUtilizzati.xsd"/>
+	<xs:annotation>
+		<xs:documentation>Versione 1.2</xs:documentation>
+	</xs:annotation>
+	<xs:element name="InterrogaNreUtilRicevuta">
+		<xs:annotation>
+			<xs:documentation>Elemento base della ricevuta a seguito dell'interrogazione dei nre utilizzati per numerare un prescritto</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codEsitoInterrogaNreUtilizzati" type="td:codEsitoType">
+					<xs:annotation>
+						<xs:documentation>Codice dell'esito dell'operazione</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ElencoNreUtilRecord" type="td:elencoNreUtilRecordType" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Elenco singoli nre</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ElencoErroriRicette" type="td:elencoErroriRicetteType" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Ripetizione di ErroreRicetta</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ElencoComunicazioni" type="td:elencoComunicazioniType" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Ripetizione di Comunicazioni di servizio</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

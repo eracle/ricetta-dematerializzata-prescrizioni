@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://invioprescrittoricevuta.xsd.dem.sanita.finanze.it" xmlns:td="http://tipodati.xsd.dem.sanita.finanze.it" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://invioprescrittoricevuta.xsd.dem.sanita.finanze.it" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://tipodati.xsd.dem.sanita.finanze.it" schemaLocation="TipiDati.xsd"/>
+	<xs:annotation>
+		<xs:documentation>Versione 1.2</xs:documentation>
+	</xs:annotation>
+	<xs:element name="InvioPrescrittoRicevuta">
+		<xs:annotation>
+			<xs:documentation>Elemento base della ricevuta dell'invio al SAC della ricetta prescritta dal medico</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nre" type="td:nreType" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Numero Ricetta Elettronica</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="codAutenticazione" type="td:stringType" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Codice autenticazione rilasciato dal SAC</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="dataInserimento" type="td:dataOraType" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Data inserimento negli archivi del SAC</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="codEsitoInserimento" type="td:codEsitoType">
+					<xs:annotation>
+						<xs:documentation>Codice dell'esito dell'inserimento</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ElencoErroriRicette" type="td:elencoErroriRicetteType" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Ripetizione di ErroreRicetta</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ElencoComunicazioni" type="td:elencoComunicazioniType" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Ripetizione di Comunicazioni di servizio</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ElencoNota" type="td:elencoNotaType" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Ripetizione di note decreto Lorenzin</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="flagPromemoria" type="td:string1Type" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Flg restituzione promemoria</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="pdfPromemoria" type="xs:base64Binary" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Promemoria in pdf</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
