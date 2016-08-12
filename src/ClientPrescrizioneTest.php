@@ -1,6 +1,6 @@
 <?php
-//require('ClientPrescrizione.php');
-require_once('demInvioPrescritto/autoload.php');
+require('ClientPrescrizione.php');
+
 require_once('config.php');
 
 class ClientPrescrizioneTest extends PHPUnit_Framework_TestCase
@@ -8,44 +8,50 @@ class ClientPrescrizioneTest extends PHPUnit_Framework_TestCase
 
 
 
-    public function test_InvioPrescritto(){
+    public function test_services(){
+      
 
-
-
-
-      //$ret =
-
-      //echo json_encode($ret);
-
-
-      /*
-      $prescrizioni = array(
-        array(
-        'codProdPrest' => '89.7',
-        'descrProdPrest' =>'',
-        'quantita' => 1
-        )
-    );
-    echo json_encode($prescrizioni);
-    echo PHP_EOL;
-      $client = new ClientPrescrizione();
-      $this->assertNotNull($client);
-
-      $risposta = $client -> InvioPrescritto(
-    		'PROVAX00X00X000Y',
-    		'130',
-    		'202',
-    		'F',
-    		'P',
-    		'',//  oppure campo descrizioneDiagnosi vedi TODO dopo
-    		$prescrizioni
-    	);
-
-      echo json_encode($risposta);
-      echo PHP_EOL;
-      */
     }
 
+
+
+
+
+/*
+public function test_InvioPrescritto(){
+      $client = new ClientPrescrizione();
+      //$this->assertNotNull($client);
+
+      $cfMedico1 = 'PROVAX00X00X000Y';
+      $codASLAo = '101';
+      $codice_regione_erogatore = '020';
+      $codSpecializzazione = 'F';
+      $tipoPrescrizione = 'F';
+      $codDiagnosi = '12';
+      $codProdPrest1 = '123';
+      $descrProdPrest1 = 'prova';
+
+      $response = $client -> InvioPrescritto(
+        $cfMedico1,
+        $codASLAo,
+        $codice_regione_erogatore,
+        $codSpecializzazione,
+        $tipoPrescrizione,
+        $codDiagnosi,
+        $codProdPrest1,
+        $descrProdPrest1
+      );
+
+      echo "====== REQUEST HEADERS =====" . PHP_EOL;
+      echo var_dump($client-> invioPrescritto -> __getLastRequestHeaders());
+      echo "========= REQUEST ==========" . PHP_EOL;
+      var_dump($client-> invioPrescritto -> __getLastRequest());
+      echo "========= RESPONSE =========" . PHP_EOL;
+      var_dump($response);
+
+}
+*
+*/
 
 }
 ?>

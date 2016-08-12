@@ -15,24 +15,27 @@ define( "PASSWORD" , "Salve123" );
 
 define( "PINCODE" , "1234567890");
 
-define( "CODICE_REGIONE_EROGATORE" , "");
-
 /** DEFINIZIONE CERTIFICATI **/
 
 /* Path del file contenente il certificato della CA (Certification authority). */
-define( "CA_CERT_FILE" ,  "./cert/AddTrustExternalCARoot.crt" );
+define( "CA_CERT_FILE" ,  "./cert/chain.pem" );
+//define( "CA_CERT_FILE" ,  "./cert/ca_test.crt" );
+//define ( "CA_PATH" , "./cert/" );
 
-/* Path del file del certificato SSL usato per cifrare il pincode. */
+/* Path del file del certificato usato per SSL. */
+//define( "SSL_CERTIFICATE" ,  "/home/eracle/php/git/client_prescrizione/src/cert/demservicetest.pem" );
+
+/* Path del file del certificato usato per cifrare il pincode. */
 define( "CERT_CIFRA_PINCODE" , "./cert/SanitelCF.cer" );
 
 
 /** DEFINIZIONE ENDPOINTS dei VARI SERVIZI**/
 
 /* Endpoint di test: */
- define( "ENDPOINT_DOMAIN" , "https://demservicetest.sanita.finanze.it");
+//define( "ENDPOINT_DOMAIN" , "https://demservicetest.sanita.finanze.it");
 
 // Endpoint di produzione */
-//define( "ENDPOINT_DOMAIN" , "https://demservice.sanita.finanze.it");
+define( "ENDPOINT_DOMAIN" , "https://demservice.sanita.finanze.it");
 
 /* Endpoint del servizio di invio di una richiesta di prescrizione. */
 define( "demInvioPrescritto_ENDPOINT",
