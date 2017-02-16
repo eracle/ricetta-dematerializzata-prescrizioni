@@ -1,16 +1,19 @@
-# PROGETTO TESSERA SANITARIA
-## Web services per la trasmissione elettronica delle prestazioni mediche dematerializzate (degreto 2 novembre 2011)
-Client PHP - PRESCRIZIONE
+# PHP Client - Italian health insurance card web services
+Unfinished PHP project whose aim was to implement a php client for the italian health insurance card web services provided by Sogei S.p.a.
+As the [official documentation][ricetta_ufficiale] points out, the web service allows also the transmition of the patient's data, related to a specified medical service, to a centralized database.
 
-Implementazione iniziale del client responsabile dell'invio delle prescrizioni delle ricette dematerializzate ai web services ospitati da Sogei.
-Nel file pdf (Specifiche+tecniche+ricetta+dematerializzata-prescrizione+(01032016)) trovate le specifiche del servizio.
-Il sito web di riferimento è [questo](http://sistemats1.sanita.finanze.it/wps/content/Portale_Tessera_Sanitaria/STS_Sanita/Home/Sistema+TS+informa/Medici+in+rete/Ricetta+dematerializzata+DM+2+novembre+2011/).
+## Italian documentation
+Is possible to found a copy of the specifications on the service in the file:
+- Specifiche+tecniche+ricetta+dematerializzata-prescrizione+(01032016)
 
-La libreria non è stata finita, ma da l'idea di una sua possibile implementazione in PHP.
+# Not finished!
+The library was not finished.
 
 ### Install
 See the INSTALL.md file.
 
 ### Run Tests:
 Check the src/test.sh file.
+
+[ricetta_ufficiale]: http://sistemats1.sanita.finanze.it/wps/content/Portale_Tessera_Sanitaria/STS_Sanita/Home/Sistema+TS+informa/Medici+in+rete/Ricetta+dematerializzata+DM+2+novembre+2011/
 
