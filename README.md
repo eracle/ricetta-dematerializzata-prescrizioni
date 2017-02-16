@@ -1,4 +1,4 @@
-# PHP Client - Italian health insurance card web services
+# PHP SoapClient - Client for the digital medical prescription web services (Italy!)
 Unfinished PHP project whose aim was to implement a php client for the italian health insurance card web services provided by Sogei S.p.a.
 As the [official documentation][ricetta_ufficiale] points out, the web service allows also the transmition of the patient's data, related to a specified medical service, to a centralized database.
 
